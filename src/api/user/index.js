@@ -4,7 +4,7 @@ import axios from 'axios';
 const  login = form => axios.post('/api/v1/user/login', form).then(res => res.data);
 
 //注册账号
-const register = form => axios.post('/api/v1/user/register',form).then(res => res.data)
+const register = regform => axios.post('/api/v1/user/register',regform).then(res => res.data)
 
 // 创建视频
 const postVideo = form => axios.post('/api/v1/videos', form).then(res => res.data)

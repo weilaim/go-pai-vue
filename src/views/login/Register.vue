@@ -13,6 +13,7 @@
     <el-col :span="1"> <el-divider direction="vertical"></el-divider> </el-col>
     <el-col :xl="6" :lg="7">
       <el-form
+        enctype='multipart/form-data'
         label-position="right"
         :rules="rules"
         label-width="80px"
@@ -59,10 +60,10 @@ export default {
   data() {
     return {
       registerForm: {
-        nickname: "",
-        user_name: "",
-        password: "",
-        password_confirm: "",
+        nickname: '',
+        user_name: '',
+        password: '',
+        password_confirm: '',
       },
       rules: {
         nickname: [
@@ -96,7 +97,7 @@ export default {
                 this.$router.push("/index");
               } else {
                 this.$notify.error({
-                  title: "登录失败",
+                  title: "注册失败",
                   message: res.msg,
                 });
               }
