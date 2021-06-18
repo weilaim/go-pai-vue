@@ -83,7 +83,6 @@ export default {
               });
             });
         } else {
-          // this.getCaptcha();
           return false;
         }
       });
